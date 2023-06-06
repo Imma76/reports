@@ -17,6 +17,7 @@ class ReportServices {
     createReport(report) {
         return __awaiter(this, void 0, void 0, function* () {
             const create = reports_model_1.default.create(report);
+            return create;
         });
     }
 }

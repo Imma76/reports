@@ -12,9 +12,11 @@ class ReportsController{
             room: req.body.room,
             
         }
-       const create =  await reportService.createReport(data);
+        const create = await reportService.createReport(data);
         return res.status(201).json({status:true, message:'report created successfully'})
     }
+
+    
 }
 
 
