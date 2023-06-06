@@ -16,8 +16,14 @@ const reports_model_1 = __importDefault(require("../model/reports.model"));
 class ReportServices {
     createReport(report) {
         return __awaiter(this, void 0, void 0, function* () {
-            const create = reports_model_1.default.create(report);
+            const create = yield reports_model_1.default.create(report);
             return create;
+        });
+    }
+    getAllReports() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const reports = yield reports_model_1.default.find();
+            return reports;
         });
     }
 }

@@ -9,10 +9,10 @@ const app = express();
 
 middleware(app)
 
-const PORT = 1300
+const PORT:Number = 1300
 
-app.listen((PORT:Number) => {
-    console.log('app is connected')
+app.listen(PORT, ()=> {
+    console.log(`app is connected on ${PORT}`)
 })
 
 

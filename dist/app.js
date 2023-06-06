@@ -10,6 +10,6 @@ dotenv_1.default.config();
 const app = (0, express_1.default)();
 (0, middleware_1.default)(app);
 const PORT = 1300;
-app.listen((PORT) => {
-    console.log('app is connected');
+app.listen(PORT, () => {
+    console.log(`app is connected on ${PORT}`);
 });

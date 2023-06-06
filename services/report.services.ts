@@ -4,8 +4,13 @@ class ReportServices{
 
 
     async createReport(report:Object) {
-        const create = reportModel.create(report);
+        const create = await reportModel.create(report);
         return create;
+    }
+
+    async getAllReports() {
+        const reports = await reportModel.find();
+        return reports;
     }
 
 

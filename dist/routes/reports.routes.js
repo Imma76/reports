@@ -7,4 +7,5 @@ const reports_controller_1 = __importDefault(require("../controller/reports.cont
 const express_1 = __importDefault(require("express"));
 const reportsRouter = express_1.default.Router();
 reportsRouter.post('/', reports_controller_1.default.createReport);
+reportsRouter.get('/', reports_controller_1.default.getReports);
 exports.default = reportsRouter;
